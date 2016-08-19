@@ -3,20 +3,20 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.springframework</groupId>
+	<parent>
+		<groupId>microservices.example</groupId>
+		<artifactId>microservices-example</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>microservices.example</groupId>
 	<artifactId>hysterix-client-example</artifactId>
 	<packaging>jar</packaging>
-	<version>0.1.0</version>
+	<version>0.0.1-SNAPSHOT</version>
 	
 	<properties>
 		<spring-cloud.version>1.0.2.RELEASE</spring-cloud.version>
 	</properties>
-
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.3.6.RELEASE</version>
-	</parent>
 
 	<build>
 		<plugins>
@@ -65,7 +65,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
-			<version>1.0.0.RELEASE</version>
+			<version>${spring-cloud-starter-eureka-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
