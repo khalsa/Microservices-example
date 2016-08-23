@@ -9,14 +9,16 @@ Pre-requites :-
   
 This example covers following functionalties :-
   <br>1)  Creating Rest full services using Spring boot.</br>
-  <br> 2)  ServiceRegistry using Eureka.</br>
+  <br>2)  ServiceRegistry using Eureka.</br>
   <br>3)  Hsytserix, Ribbon enabled feign client.</br>
   
 Simply import the project in your IDE and build the parent pom.
 
 Start each of the module using maven command <strong><i>mvn spring-boot:run</i></strong>
 
+Embedded Tomcat port has been changed in order to make it run on a single machine
 
+In order to test load balancing EmployeeRest and EmployeeRestSecond module are registered to Eureka server with same name  <strong><i>employee-service</i></strong> in bootstrap.yml file
 
 
   
