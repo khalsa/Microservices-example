@@ -14,7 +14,7 @@ This example covers following functionalties :-
   
 Simply import the project in your IDE and build the parent pom.
 
-Start each of the module using maven command mvn spring-boot:run
+Start each of the module using maven command <strong><i>mvn spring-boot:run</i></strong>
 
 
 
