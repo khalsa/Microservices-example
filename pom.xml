@@ -20,7 +20,11 @@
 
 	
         <modules>
-            <module>DepartmentRest</module>
+        	<module>EurekaServer</module>
+        	<module>EmployeeRest</module>
+        	<module>EmployeeRestSecond</module>
+        	<module>DepartmentRest</module>
+            <module>HysterixClient</module>
         </modules>
   
  

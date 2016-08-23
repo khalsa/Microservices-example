@@ -21,11 +21,6 @@ public class HysterixClientController {
 		return "Hysterix Client Service is Up";
 	}
 	
-	@RequestMapping("/rest/getAllEmployeesAsync")
-    @ResponseBody
-    public List<EmployeeBean> getAllEmployeesAsync() {
-        return sbInterface.getEmployeesAsync2();
-    }
 	
 	@RequestMapping("/rest/getAllEmployees")
     @ResponseBody
