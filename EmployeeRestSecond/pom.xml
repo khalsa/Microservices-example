@@ -10,7 +10,7 @@
 	</parent>
 
 	<groupId>microservices.example</groupId>
-	<artifactId>department-rest-service</artifactId>
+	<artifactId>employee-rest-service-second</artifactId>
 	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 
