@@ -14,11 +14,30 @@ This example covers following functionalties :-
   
 Simply import the project in your IDE and build the parent pom.
 
-Start each of the module using maven command <strong><i>mvn spring-boot:run</i></strong>
+Start each of the module using maven command <strong><i>mvn spring-boot:run</i></strong>.
 
-Embedded Tomcat port has been changed in order to make it run on a single machine
+Embedded Tomcat port has been changed in order to make it run on a single machine.
 
-In order to test load balancing EmployeeRest and EmployeeRestSecond module are registered to Eureka server with same name  <strong><i>employee-service</i></strong> in bootstrap.yml file
+In order to test load balancing EmployeeRest and EmployeeRestSecond module are registered to Eureka server with same name  <strong><i>employee-service</i></strong> in bootstrap.yml file.
+
+Once Eureka and EmployeeService is up, navigate to localhost:8761, you will notice only one instance of Employee-Service.
+Once EmployeeServiceSecond you will notice two instance.
+
+<p align="center">
+  <img src="https://github.com/khalsa/Microservices-example/blob/master/DepartmentRest/src/main/images/eureka1.jpg" width="350"/>
+  <img src="https://github.com/khalsa/Microservices-example/blob/master/DepartmentRest/src/main/images/eureka2.jpg" width="350"/>
+</p>
+
+Once all applications are up hit http://localhost:8086/rest/getAllEmployees, you will notice request reaching to both the deployed employee rest service instance in round-robin(default) strategy.
+
+<p align="center">
+  <img src="https://github.com/khalsa/Microservices-example/blob/master/DepartmentRest/src/main/images/image3.jpg" width="350"/>
+</p>
+
+
+
+
+
 
 
   
