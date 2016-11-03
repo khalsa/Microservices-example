@@ -42,22 +42,4 @@ public class ServiceBOImpl{
         return new ArrayList<DepartmentBean>();
     }
 	
-
-	
-	public List<EmployeeBean> getEmployeeWithNames(){
-		List<DepartmentBean> deptBeanList = getDepartments();
-		List<EmployeeBean> empBeanList = getEmployees();
-		
-		if(empBeanList != null && empBeanList.size() > 0){
-			for(EmployeeBean e : empBeanList){
-				for(DepartmentBean d : deptBeanList){
-					if(d.getDepartmentId() == e.getDepartmentId()){
-						e.setDepartName(d.getDepartmentName());
-						break;
-					}
-				}
-			}
-		}
-		return empBeanList;
-	}
 }
