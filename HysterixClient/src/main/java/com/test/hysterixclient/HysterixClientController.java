@@ -31,6 +31,19 @@ public class HysterixClientController {
 	@RequestMapping("/rest/getAllEmployeesWithHysterix")
     @ResponseBody
     public List<EmployeeBean> getAllEmployeesWithHysterix() {
-        return sbInterface.getEmployeeWithNames();
+        List<DepartmentBean> deptBeanList = sbInterface.getDepartments();
+		List<EmployeeBean> empBeanList = sbInterface.getEmployees();
+		
+		if(empBeanList != null && empBeanList.size() > 0){
+			for(EmployeeBean e : empBeanList){
+				for(DepartmentBean d : deptBeanList){
+					if(d.getDepartmentId() == e.getDepartmentId()){
+						e.setDepartName(d.getDepartmentName());
+						break;
+					}
+				}
+			}
+		}
+		return empBeanList;
     }
 }
